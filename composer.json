@@ -1,0 +1,22 @@
+{
+    "name": "diego1araujo/locale",
+    "description": "A better way to handle multilanguage",
+    "keywords": ["laravel", "translation", "language", "multilanguage"],
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Diego Araujo",
+            "email": "diego77araujo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Diego1araujo\\Locale": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

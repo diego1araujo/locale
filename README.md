@@ -39,7 +39,7 @@ Of course, feel free to change both of them.
 
 ## Usage
 
-Define the set method as prefix in route group
+Define the set method as a prefix value in route group
 ```php
 Route::group(array('prefix' => Locale::set()), function()
 {

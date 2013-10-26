@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/diego1araujo/locale.png?branch=master)](https://travis-ci.org/diego1araujo/locale)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/diego1araujo/locale/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 ## Locale - A better way to handle multilanguage.
 
 The goal of this package is offer a simple way to make a multilanguage for Laravel 4.

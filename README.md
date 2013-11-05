@@ -7,10 +7,10 @@ The goal of this package is offer a simple way to make a multilanguage for Larav
 
 ## Installation
 
-Edit your project's `composer.json` file to require the package.
+Edit `composer.json` file to require this package.
 
     "require": {
-		"laravel/framework": "4.0.*",
+		...
 		"diego1araujo/locale": "dev-master"
 	}
 

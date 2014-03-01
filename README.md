@@ -40,6 +40,34 @@ By default, the main language is `en` (english) and the `available` item contain
 
 Of course, feel free to change both of them.
 
+> NOTE: The main language isn't appended in url, only others (from `available` item).
+
+## Data
+
+Go to `app/lang/[language]` and create a new file(s) for each language (Files must have the same name for all languages)
+
+Like this:
+
+English `app/lang/en/message.php`
+
+```php
+return array(
+
+	'welcome' => 'Welcome to my page',
+
+);
+```
+
+Portuguese `app/lang/pt/message.php`
+
+```php
+return array(
+
+	'welcome' => 'Bem-vindo à minha página',
+
+);
+```
+
 ## Usage
 
 Define the set method as a prefix value in route group
@@ -58,6 +86,11 @@ Route::group(array('prefix' => Locale::set()), function()
 });
 ```
 
+Printing a message
+```php
+Lang::get('message.welcome')
+```
+
 Retrieving the current language
 ```php
 Locale::get();
@@ -65,5 +98,38 @@ Locale::get();
 
 Building url's with the current language
 ```php
-Locale::url('about');
+Locale::url('about'); // [site-domain]/[current-language]/about
+```
+
+### One route for many languages
+
+You can use a single route for a multiple language page. I suggest you to place all pages in your file translation.
+
+English `app/lang/en/message.php`
+
+```php
+return array(
+
+	'menu-page' => 'Page',
+	'slug-page' => 'page',
+
+);
+```
+
+Portuguese `app/lang/pt/message.php`
+
+```php
+return array(
+
+	'menu-page' => 'Página',
+	'slug-page' => 'pagina',
+
+);
+```
+
+```php
+Route::group(array('prefix' => Locale::set()), function()
+{
+	Route::get(Lang::get('message.slug-page'), ['as' => 'page', 'uses' => 'HomeController@page']);
+}
 ```

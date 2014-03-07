@@ -1,0 +1,11 @@
+{
+  "providers": [
+    "Diego1araujo\Locale\ServiceProvider"
+  ],
+  "aliases": [
+    {
+      "alias": "Locale",
+      "facade": "Diego1araujo\Locale\Facade"
+    }
+  ]
+}

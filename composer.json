@@ -14,8 +14,8 @@
         "illuminate/support": "~4|~5"
     },
     "autoload": {
-        "psr-0": {
-            "Diego1araujo\\Locale": "src/"
+        "psr-4": {
+            "Diego1araujo\\Locale\\": "src/"
         }
     },
     "minimum-stability": "dev"
